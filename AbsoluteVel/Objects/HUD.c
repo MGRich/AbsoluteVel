@@ -14,6 +14,7 @@ void HUD_Draw(void)
 
     if (debugMode && HUD_DrawNumbersBase10) {
         if (player->camera) {
+            player->camera->center = player->position;
             Vector2 debugPos;
 
             // Draw this (its drawn when debug mode is on by default

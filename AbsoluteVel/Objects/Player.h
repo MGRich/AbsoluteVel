@@ -3,7 +3,8 @@
 
 #include "GameAPI/Game.h"
 
-// hooray for being lazy
+extern bool32 centerCamera;
+
 typedef struct {
     RSDK_ENTITY
     StateMachine(state);
@@ -243,7 +244,7 @@ typedef struct {
     StateMachine(state);
     StateMachine(nextAirState);
     StateMachine(nextGroundState);
-    void *camera;
+    EntityCamera *camera;
     Animator animator;
     Animator tailAnimator;
     int32 maxWalkSpeed;

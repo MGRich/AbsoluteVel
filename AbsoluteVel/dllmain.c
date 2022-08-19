@@ -3,6 +3,8 @@
 #include "Objects/Player.h"
 #include "Objects/HUD.h"
 
+bool32 centerCamera;
+
 #if RETRO_USE_MOD_LOADER
 DLLExport bool32 LinkModLogic(EngineInfo *info, const char *id);
 #endif
@@ -14,6 +16,10 @@ void InitModAPI(void)
 
     // Get Public Funcs
      HUD_DrawNumbersBase10 = Mod.GetPublicFunction(NULL, "HUD_DrawNumbersBase10");
+
+    centerCamera = Mod.GetSettingsBool("", "Config:centerCamera", false);
+    Mod.SetSettingsBool("Config:centerCamera", centerCamera);
+    Mod.SaveSettings();
 }
 
 #if RETRO_USE_MOD_LOADER
