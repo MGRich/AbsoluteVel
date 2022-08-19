@@ -19,8 +19,8 @@ void HUD_Draw(void)
             // Draw this (its drawn when debug mode is on by default
             if (RSDK_GET_ENTITY(SLOT_PLAYER1, Player)->classID != debugMode->classID) {
                 // Draw Player YVel
-                debugPos.x = (ScreenInfo[SceneInfo->currentScreenID].size.x - 16) << 16;
-                debugPos.y = TO_FIXED(ScreenInfo->size.y - 12);
+                debugPos.x = TO_FIXED(85);
+                debugPos.y = TO_FIXED(74);
                 HUD_DrawNumbersBase10(&debugPos, abs(player->velocity.y >> 0x0C), 4);
 
                 // Draw Player XVel
