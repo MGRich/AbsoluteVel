@@ -1,4 +1,4 @@
 # AbsoluteVel
-Mod that shows Player1's X and Y Absolute Velocity.
+Sonic Mania Decomp Mod that shows Player1's X and Y Absolute Velocity.
 
-## REQUIRES GameAPI TO BE SYMLINKED ##
+### REQUIRES GameAPI TO BE SYMLINKED! ###
