@@ -317,7 +317,7 @@ extern ObjectPlayer *Player;
 extern void (*Player_ChangeCharacter)(EntityPlayer *player, int32 character);
 
 // Standard Entity Events
-void Player_StageLoad(void);
+void Player_Draw(void);
 
 // Extra Entity Functions
 bool32 Player_Input_P1_Hook(bool32 skippedState);
